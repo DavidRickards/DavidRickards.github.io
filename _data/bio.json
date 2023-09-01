@@ -10,8 +10,7 @@
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "DavidRickards", "url": "http://github.com/DavidRickards" },
-      { "network": "linkedin", "username": "username", "url": "http://linkedin.com/in/changeme" },
-      { "network": "instagram", "username": "username", "url": "http://instagram.com/changeme" }
+      { "network": "linkedin", "username": "username", "url": "www.linkedin.com/in/david-rickards-6a5b05224" }
     ]
   },
   "interests": [
