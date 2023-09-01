@@ -19,6 +19,6 @@ accessed again upon startup.
 
 #Database & Interface Code Files:
   <div class="text-center p-4">
-  <img width="316px" height = "556px" src="../img/database.txt" class="img-thumbnail" >
+  <img width="316px" height = "556px" src="../img/database.png" class="img-thumbnail" >
   <img width="316px" height = "556px" src="../img/user_interface.txt" class="img-thumbnail" >
  
