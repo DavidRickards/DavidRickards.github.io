@@ -15,7 +15,8 @@ The Planning Division of The County of Kauai created a poll a few months before 
 
 If you are interested in looking at their site you can go to  : [https://kauaiadaptation.com/](https://kauaiadaptation.com/).
 
-
+<div>
   <img width="416px" height = "656px" src="../img/Poll-Giveaway-Flyer-1.webp" >
   
   <img width="416px" height = "656px" src="../img/Art_contest.webp" >
+</div>
