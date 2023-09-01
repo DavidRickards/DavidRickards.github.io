@@ -12,7 +12,7 @@ summary: "I was tasked with designing flyers during my internshipt for one of th
 --- 
 
   <img width="316px" height = "556px" src="../img/Poll-Giveaway-Flyer-1.webp" class="img-thumbnail" >
-  <div class="text-center p-4">
+  
   <img width="316px" height = "556px" src="../img/Art_contest.webp" class="img-thumbnail" >
 </div>
 
