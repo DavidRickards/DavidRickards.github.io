@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/bank_database_logo.png
+image: img/bank_database_logo_square.png
 title: "Bank Interfance & Database"
 date: 2023-10-31
 published: true
