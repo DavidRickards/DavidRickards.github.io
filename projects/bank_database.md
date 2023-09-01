@@ -17,5 +17,7 @@ to add, remove and modify the account information of bank customer. It keeps a s
 file that save all records in the database before closing the interface allowing it to be 
 accessed again upon startup.
 
-Database & Interface Code Files:
-
+#Database & Interface Code Files:
+ <img width="316px" height = "556px" src="../img/database.txt" class="img-thumbnail" >
+  <img width="316px" height = "556px" src="../img/user_interface.txt" class="img-thumbnail" >
+  <div class="text-center p-4">
