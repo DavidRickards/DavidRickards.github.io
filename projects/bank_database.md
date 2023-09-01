@@ -12,13 +12,16 @@ information within the banks database within C and then C++ (though not included
 ---
 #Why A Bank?
 
-This project was created for my 212 project to create a bank interface that will allow users 
+This project was made for my 212 project 1 to create a bank interface that will allow users 
 to add, remove and modify the account information of bank customer. It keeps a seperate list 
 file that save all records in the database before closing the interface allowing it to be 
-accessed again upon startup.
+accessed again upon startup. The code was written in C and was run on UHUnix systems. I would 
+have to stay the hardest part of this project was insureing that the text document with all 
+the account information was read and written to and from teh text file correctly. Another 
+difficulty was making sure the string were being read and correctly and discarded any excess 
+character to avoid them spilling over into the next string inputed section.
 
-#Database & Interface Code Files:
+
   <div class="text-center p-4">
-  <img width="316px" height = "556px" src="../img/database.png" class="img-thumbnail" >
-  <img width="316px" height = "556px" src="../img/user_interface.txt" class="img-thumbnail" >
+
  
