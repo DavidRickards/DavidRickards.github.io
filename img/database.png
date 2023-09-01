@@ -1,0 +1,446 @@
+/*****************************************************************
+//
+//  NAME:        David Rickards
+//
+//  HOMEWORK:    Project1
+//
+//  CLASS:       ICS 212
+//
+//  INSTRUCTOR:  Ravi Narayan
+//
+//  DATE:        October 22, 2022
+//
+//  FILE:        database.c
+//
+//  DESCRIPTION:  The functionality of the database.
+//
+//  REFERENCES:   None
+//
+****************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "record.h"
+#include "database.h"
+
+extern int debug_mode;
+
+/*****************************************************************
+//
+//  Function name: addRecord
+//
+//  DESCRIPTION:   Add an account record from the database.
+//
+//  Parameters:    start (struct record **) : start of linke list
+//                 account (int) : account number
+//                 name (char[]) : account name
+//                 address (char[]) : address
+//
+//  Return values:  None
+//
+****************************************************************/
+void addRecord(struct record ** start, int account, char name[], char address[])
+{
+    int loop = 0;
+    struct record* previous;
+    struct record* next;
+    struct record* newrecord;
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  addRecord was called.");
+        printf("\n(DEBUGGING)  start   : %p", (void*)(*start));
+        printf("\n(DEBUGGING)  account : %d", account);
+        printf("\n(DEBUGGING)  name    : %s", name);
+        printf("\n(DEBUGGING)  address : %s\n", address);
+    }
+
+    newrecord = (struct record *) malloc(sizeof(struct record));
+
+    newrecord->accountno = account;
+    strcpy(newrecord->name, name);
+    strcpy(newrecord->address, address);
+    newrecord->next = NULL;
+
+    previous = *start;
+
+if (*start == NULL)
+{   
+    *start = newrecord;
+}
+else if (account >= previous->accountno)
+{
+     newrecord->next = *start;
+     *start = newrecord;
+}
+else
+{
+    newrecord->next = previous->next;
+    previous->next = newrecord;
+    next = newrecord->next;
+
+    while (next != NULL && loop != 1)
+    {
+        if (newrecord->accountno < next->accountno)
+        {
+            previous->next = next;
+            newrecord->next = next->next;
+            next->next = newrecord;
+
+            previous = next;
+            next = newrecord->next;
+        }
+        else
+        {   
+            loop = 1;
+        }
+    }
+}
+
+    if (debug_mode == 1)
+    {
+        printf("\n(DEBUGGING) updated start : %p\n", (void*)start);
+    }
+ 
+}
+
+/*****************************************************************
+//
+//  Function name: printAllRecord
+//
+//  DESCRIPTION:   Prints all records stored in the database
+//
+//  Parameters:    start (struct record *) : tart of linked list
+//
+//  Return values:  None
+//
+****************************************************************/
+void printAllRecords(struct record * start)
+{
+    struct record* current;
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  printAllRecords was called.");
+        printf("\n(DEBUGGING)  start : %p\n", (void*)start);
+    }
+
+    if  (start == NULL)
+    {
+        printf("\nNo records are currently in the database\n");
+    }
+    else
+    {
+        current = start;
+
+        while(current != NULL)
+        {
+            printf("\n=============================================\n");
+            printf("Account Number  : %d\n", current->accountno);
+            printf("Account Name    : %s\n", current->name);
+            printf("Account Address : %s", current->address);
+            printf("\n=============================================");
+
+            current = current->next;
+        }
+    }
+}
+
+/*****************************************************************
+//
+//  Function name: findRecord
+//
+//  DESCRIPTION:   Finds an account record using the given record or account number
+//
+//  Parameters:    record (struct record **) : account record
+//                 account (int) : account number
+//
+//  Return values:  0 : record(s) found
+//                 -1 : record(s) not found
+//
+****************************************************************/
+int findRecord (struct record * start, int faccount)
+{
+    int result = -1;
+    struct record * current;
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  findRecord was called.");
+        printf("\n(DEBUGGING)  start    : %p", (void*)start);
+        printf("\n(DEBUGGING)  faccount : %d\n", faccount);
+    }
+
+    current = start;
+
+    while(current != NULL)
+    {
+        if (faccount == current->accountno)
+        {
+            printf("\n=============================================\n");
+            printf("Account Number  : %d\n", current->accountno);
+            printf("Account Name    : %s\n", current->name);
+            printf("Account Address : %s", current->address);
+            printf("\n=============================================");
+             
+            result = 0;
+        }
+
+        current = current->next;
+    }
+
+    return result;
+}
+
+/*****************************************************************
+//
+//  Function name: deleteRecord
+//
+//  DESCRIPTION:   Deletes an account record
+//
+//  Parameters:    start (struct record **) : start of linked list
+//                 raccount (int) : account number to delete
+//
+//  Return values:  0 : record(s) removed
+//                 -1 : record(s) not found
+//
+****************************************************************/
+int deleteRecord(struct record ** start, int raccount)
+{
+    struct record* previous;
+    struct record* temp;
+    struct record* current;
+
+    int result = -1;
+    int exit = 0;
+
+    if (debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  deleteRecord was called.");
+        printf("\n(DEBUGGING)  start    : %p", (void*)(*start));
+        printf("\n(DEBUGGING)  raccount : %d\n", raccount);
+    }
+
+    if (*start != NULL)
+    {
+        current = *start;
+
+        if (current->accountno == raccount)
+        {
+            while (current != NULL && exit != 1)
+            {
+                if (current->accountno == raccount)
+                {
+                    temp = current->next;
+                    free(current);
+
+                    *start = temp;
+                    current = temp;
+                    result = 0;
+                }
+                else
+                {
+                    *start = current;
+                    current = current->next;
+                    exit = 1;
+                }
+            }
+        }
+        else
+        {
+            previous = *start;
+
+            while (current != NULL)
+            {
+                if(current->accountno == raccount)
+                {
+                previous->next = current->next;
+                current->next = NULL;
+                free(current);
+
+                current = previous->next;
+                result = 0;
+                }
+                else
+                {
+                    previous = current;
+                    current = current->next;
+                }
+            }
+        }
+    }
+
+    if (debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  updated start : %p\n", (void*)(*start));
+    }
+
+    return result;
+}
+
+/*****************************************************************
+//
+//  Function name: writefile
+//
+//  DESCRIPTION:   Writes all records and information from a linked
+//                 list in a database file.
+//
+//  Parameters:    start (struct record *) : start of linekd list
+//                 filename (char[]) : name of file to write
+//
+//  Return values:  0 : file opened
+//                 -1 : file didn't open
+//
+****************************************************************/
+int writefile(struct record * start, char filename [ ])
+{
+    FILE* fp;
+    int result = -1;
+    struct record* current;
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  writefile was called.");
+        printf("\n(DEBUGGING)  start    : %p", (void*)start);
+        printf("\n(DEBUGGING)  filemane : %s\n", filename);
+    }
+
+    fp = fopen(filename, "w");
+
+    if (fp != NULL)
+    {
+        current = start;
+
+        while (current != NULL)
+        {
+            fprintf(fp, "%d\n", current->accountno);
+            fprintf(fp, "%s\n", current->name);
+            fprintf(fp, "%s;\n", current->address);
+
+            current = current->next;
+        }
+
+        fclose(fp);
+        result = 0;
+    }
+
+    return result;
+}
+
+/*****************************************************************
+//
+//
+//  Function name: readfile
+//
+//  DESCRIPTION:   Reads the information from a database file
+//                 into a linked lists of records.
+//
+//  Parameters:    start (struct record *) : start of linekd list
+//                 filename (char[]) : name of file to read
+//
+//  Return values:  0 : file opened
+//                 -1 : file didn't open
+//
+****************************************************************/
+int readfile(struct record ** start, char filename [ ])
+{
+    FILE* fp;
+    int i, account, result = -1;
+
+    char name[31];
+    char address[60];
+    char newline[2];
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  readfile was called.");
+        printf("\n(DEBUGGING)  start    : %p", (void*)(*start));
+        printf("\n(DEBUGGING)  filemane : %s\n", filename);
+    }
+
+    fp = fopen(filename, "r");
+
+    if (fp != NULL)
+    {
+        while (fscanf(fp, "%d", &account) != EOF)   /* Professor said to use fscanf */
+        {
+            fgets(newline, 2, fp);
+            fgets(name, 31, fp);
+
+            for (i = 0; i < 31; i++)
+            {
+                if (name[i] == '\n')
+                {
+                    name[i] = '\0';
+                    i = 31;
+                }
+            }
+
+            for (i = 0; i < 61; i++)
+            {
+                address[i] = fgetc(fp);
+                if (address[i] == ';')
+                {
+                    address[i] = '\0';
+                    fgetc(fp);
+                    i = 61;
+                }
+            }
+
+            addRecord(start, account, name, address);
+        }
+        fclose(fp);
+        result = 0;
+
+    }
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING) updated start : %p\n", (void*)(*start));
+    }
+
+    return result;
+}
+
+/*****************************************************************
+//
+//  Function name: cleanup
+//
+//  DESCRIPTION:   Deallocate all memory used by the linked list
+//                 and assigns NULL to start.
+//
+//  Parameters:    start (struct record *) : start of linekd list
+//
+//  Return values:  None
+//
+****************************************************************/
+void cleanup(struct record ** start)
+{
+    struct record* next;
+    struct record* current;
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING)  cleanup was called.");
+        printf("\n(DEBUGGING)  start : %p", (void*)start);
+    }
+
+    current = *start;
+
+    while (current != NULL)
+    {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+
+    *start = NULL;
+    current = NULL;
+    next = NULL;
+
+    if(debug_mode == 1)
+    {
+        printf("\n(DEBUGGING) updated start : %p\n", (void*)(*start));
+    }
+}                                                                                                                                                                                                                                                                                                                                              446,1         Bot
