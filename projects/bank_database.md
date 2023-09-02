@@ -10,7 +10,7 @@ labels:
 summary: "A usable bank interface that is able to acces and modify all bank customers
 information within the banks database within C and then C++ (though not included)."
 ---
-"##Why A Bank?"
+## Why A Bank?
 
 This project was made for my 212 project 1 to create a bank interface that will allow users 
 to add, remove and modify the account information of bank customer. It keeps a seperate list 
