@@ -11,7 +11,7 @@ labels:
 ---
 ## Ask Smarter Not Harder
 
-
+Picture this, or just remember, you are working on coding  for one of your homework assignments and you keep getting an error that you have spent hours reading, testing, trying to fix only to no avail. When you finally decide to ask for help you want it to be quick and in order for it to be quick there needs to be a clear communication of things and ask smart questions. A good example of this is on [StackOverflow](https://stackoverflow.com/questions/20279484/how-to-access-the-correct-this-inside-a-callback) where they about the proper way to access the correct “this” data in a call back. This question would make Raymond proud because they don’t babble in the title, they explain their provided code, and the specific problem they are having with their code. They continue by explaining another method they tried with the attached source code. They end with a question instead of just a blank cry for help. Since it was asked smartly, someone was able to give specific feedback explaining in different parts how  “this” works and can be accessed. The question was also rated highly.
 
 ## Asking For Failure
 
