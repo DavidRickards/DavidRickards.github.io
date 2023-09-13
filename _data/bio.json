@@ -10,7 +10,7 @@
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "DavidRickards", "url": "http://github.com/DavidRickards" },
-      { "network": "linkedin", "username": "username", "url": "www.linkedin.com/in/david-rickards-6a5b05224" }
+      { "network": "linkedin", "username": "username", "url": "https://www.linkedin.com/in/david-rickards-6a5b05224/" }
     ]
   },
   "interests": [
@@ -57,7 +57,16 @@
         "Certified Lifeguard, First Aid, and Rescue Skills",
         "Certified Water Safety Instructor"
       ]
-    },
+    }, {
+      "company": "County of Kauai, Long Range Planning Division",
+      "position": "Intern",
+      "website": "",
+      "startDate": "2023-06-26",
+      "endDate": "2023-08-04",
+      "summary": "Assisting in the ",
+      "highlights": [ "Assisted with the planning and organization of a youth summit", "Assisted with imputing info for new GIS layers", "Designed event flyers"
+      ]
+    }
     {
       "company": "MWR Youth Center",
       "position": "Recreation Aid",
@@ -66,16 +75,6 @@
       "endDate": "2019-01-13",
       "summary": "Responsible for assisting with the summer youth program",
       "highlights": [
-      ]
-    },
-     {
-      "company": "County of Kauai, Long Range Planning Division",
-      "position": "Intern",
-      "website": "",
-      "startDate": "2023-06-26",
-      "endDate": "2023-08-04",
-      "summary": "Assisting in the ",
-      "highlights": [ "Assisted with the planning and organization of a youth summit", "Assisted with imputing info for new GIS layers", "Designed event flyers"
       ]
     }
   ],
