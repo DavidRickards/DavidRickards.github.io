@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Completiy & Simplicity Of UI Frameworks"
+title: "Complexity & Simplicity Of UI Frameworks"
 # All dates must be YYYY-MM-DD format!
 date: 2023-10-04
 published: true
