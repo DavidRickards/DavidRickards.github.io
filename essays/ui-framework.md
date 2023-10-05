@@ -19,4 +19,10 @@ One of the primary advantages of UI frameworks is efficiency. They provide pre-d
 # All In The Framing Of Mind
 Having the chance to work with Bootstrap 5, I can attest to the immense benefits it offers. Bootstrap simplifies the creation of modern, responsive websites, allowing me to focus more on other tasks. I agree that it does add more complexity as when I first began I was more confused than with CSS because of the use of unfamiliar terms but once I understood how to navigate it not only was I saving time but I was saving sanity. Since I have the ability to add the style in my HTML file I am not clicking around from file to file but instead keeping my code well-organized. There are still many things that UI Frameworks can't do and you know what that is okay. They are just a tool if it does work for you can just go back to CSS but having that option of a shortcut is always a blessing.
 
+Here are two sites that are more or less the same:
+This one is made with Bootstrap 5
+![image](https://github.com/DavidRickards/DavidRickards.github.io/assets/113159664/7f2b485b-952a-44ef-a216-339bbc2ce31b)  
+And this is made with plain CSS
+![image](https://github.com/DavidRickards/DavidRickards.github.io/assets/113159664/3016bc0f-98fa-4fa0-aae7-5fe44da90003)
+
 
