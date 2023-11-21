@@ -11,7 +11,7 @@ labels:
   - AI
   - ChatGPT
 ---
-<img src="https://www.brookings.edu/wp-content/uploads/2023/01/shutterstock_2237655785.jpg?w=1500" width="200px">
+<img src="https://www.brookings.edu/wp-content/uploads/2023/01/shutterstock_2237655785.jpg?w=1500" width="300px">
 
 #  Introduction
 The integration of Artificial Intelligence (AI) in school education is starting to change the learning environment, presenting new possibilities and tools for students to improve their learning experience. The role of AI has growing relevance to the field of software engineering as it provides a way for students to learn and be exposed to advanced tools and techniques to tackle complex coding solutions. The only AI that I have used in software engineering is ChatGPT to help assist me in breaking down complex or confusing tasks to better my own skills, reduce the amount of time it takes to write certain code,  and teach me how to code things that I would not normally know.
