@@ -2,8 +2,7 @@
 layout: essay
 type: essay
 title: "Personal Thought On A New Language"
-# All dates must be YYYY-MM-DD format!
-date: 2015-09-08
+date: 2023-08-28
 published: true
 labels:
   - Personal Writting
