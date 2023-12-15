@@ -9,6 +9,8 @@
     "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.",
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
+      { "network": "github", "username": "DavidRickards", "url": "http://github.com/DavidRickards" }, 
+      { "network": "linkedin", "username": "David Rickards", "url": "https://www.linkedin.com/in/david-rickards-6a5b05224/" }
     ]
   },
   "interests": [
