@@ -11,7 +11,6 @@ summary: "A usable bank interface that is able to acces and modify all bank cust
 information within the banks database within C and then C++ (though not included)."
 ---
 ## Why A Bank?
-<div class="text-center p-4">
 
 This project was made for my 212 project  to create a bank interface that will allow users to add, remove and modify the account information of bank customers. It keeps a separate list file that saves all records in the database to that file before closing the interface allowing it to be accessed again upon startup. The code for this project was written in C and was run on UHUnix systems.
 
@@ -21,6 +20,7 @@ This project was also comprised of multiple file including:
 <br>![image](https://github.com/DavidRickards/DavidRickards.github.io/assets/113159664/c3de7f39-8cb7-491f-ad53-2261db4ba5ea)
 
 Is is an Example of some of the output from a trial run:
+
 ```
 -_-_--_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 To select an option please type out the name of the operation below and hit enter:
@@ -59,6 +59,4 @@ Enter account number: 1
 
 Delete Complete! All records with given account number have been removed.
 ```
-</div>
-
  
