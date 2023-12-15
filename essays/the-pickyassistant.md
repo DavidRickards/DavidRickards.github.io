@@ -11,7 +11,7 @@ labels:
 ---
 # Always Dramatic About The Small Stuff
 
-I am someone who loves to organize my code and break it up into more manageable parts but even so [ESLint](https://eslint.org/) can be a bit much. It is particular with the spacing and amount of new lines.  It tends to feel like a helicopter parent watching your every move. It makes a red squiggly line saying you are wrong feels dramatic when it is over a space and can sometimes lead to unnecessary panic thinking that there is a serious problem.
+I am someone who loves to organize my code and break it up into more manageable parts but even so [ESLint](https://eslint.org/) can be a bit much. It is particular with the spacing and number of new lines.  It tends to feel like a helicopter parent watching your every move. It makes a red squiggly line saying you are wrong feels dramatic when it is over a space and can sometimes lead to unnecessary panic thinking that there is a serious problem.
 
 # Employee Of The Year Where It Counts
 
