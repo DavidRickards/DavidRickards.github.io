@@ -18,7 +18,7 @@ This project was made for my 212 project  to create a bank interface that will a
 While working on this project I encountered a few problems. I would have to say that the hardest problem I had with this project was ensuring that the text document with all the account information was read and written to and from the text file correctly. The second problem that I had was with the input. I was not able to have it recognize when the string input was being read and correctly. For the longest time there were excess characters that continued to spill over into the next string inputted section but I eventually learned how to fix this problem by increasing the input size and clearing the characters left over from the input.
 
 This project was also comprised of multiple file including:
-![image](https://github.com/DavidRickards/DavidRickards.github.io/assets/113159664/c3de7f39-8cb7-491f-ad53-2261db4ba5ea)
+<br>![image](https://github.com/DavidRickards/DavidRickards.github.io/assets/113159664/c3de7f39-8cb7-491f-ad53-2261db4ba5ea)
 
 Is is an Example of some of the output from a trial run:
 ```
