@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="AI : Balance bewteen Friend &amp; Foe In The Classroom | David Rickards | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/DavidRickards.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="David Rickards | Professional Portfolio">
+    <meta property="og:url" content="https://DavidRickards.github.io/essays/ai-thoughts-and-uses.html">
+    <meta property="og:title" content="AI : Balance bewteen Friend &amp; Foe In The Classroom | David Rickards | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/DavidRickards.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>AI : Balance bewteen Friend & Foe In The Classroom | David Rickards | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">David Rickards</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">AI : Balance bewteen Friend & Foe In The Classroom</h1>
+  <span class="date">20 Nov 2023</span>
+  <hr>
+  <h1 id="introduction">Introduction</h1>
+<p>The integration of Artificial Intelligence (AI) in school education is starting to change the learning environment, presenting new possibilities and tools for students to improve their learning experience. The role of AI has growing relevance to the field of software engineering as it provides a way for students to learn and be exposed to advanced tools and techniques to tackle complex coding solutions. The only AI that I have used in software engineering is every students best friend, <a href="https://chat.openai.com/">ChatGPT</a>, to help assist me in breaking down complex or confusing tasks to better my own skills, reduce the amount of time it takes to write certain code,  and teach me how to code things that I would not normally know.
+<img src="https://www.brookings.edu/wp-content/uploads/2023/01/shutterstock_2237655785.jpg?w=1500" width="300px" /></p>
+
+<h1 id="me-myself--ai-experiences-in-314">Me, Myself, &amp; AI Experiences in 314</h1>
+<h2 id="experience--in-class--practice-wods">Experience / In-class / Practice WODS</h2>
+<p>In my software engineering class, I had to complete  a “WOD,” which were these in-class assignments that had to be functional and finished within the limited time to pass. Sometimes, practice WODs were assigned as homework, and we could make multiple attempts to solve them. For all of the practice WODs, if there was not a video that I watched and followed along with at some point, then I ended up using ChatGPT to help me solve them. ChatGPT was a lifesaver because of how quickly it could produce code with prompts related to or taken from the in-class WOD. I am not the fastest typer, and I didn’t have knowledge of many of the code’s methods, so I would often use ChatGPT to generate this code much faster than I could to save precious time.</p>
+
+<p>One time, when we were working on the surfing prompt in one of our earliest WODs, I was completely stuck, and I was getting a different output than I was supposed to get. So, I copied the whole prompt over to ChatGPT and retried the code, and it gave the correct output. I passed the WOD, but I never really figured out what the issue was and thus was never able to learn from that mistake. I tried to avoid doing that until I was almost out of time.</p>
+
+<h2 id="essays">Essays</h2>
+<p>While AI can most definitely be utilized to help with generating content, ideas, and more, most essays I have written within this class did not utilize ChatGPT. Most of these essays were too full of my own personal experiences and opinions that I felt using AI would only get in the way of my writing. Having said that, I did use ChatGPT in this essay. More specifically, I asked ChatGPT to help me get a broader perspective on traditional learning and modern learning so that I can think about and compare to. I also asked about AI’s practical applications as my personal knowledge is less than favorable at the moment.</p>
+
+<h2 id="final-project">Final Project</h2>
+<p>In the creation of our final project, I asked AI for help in making certain things that I have concepts for but never actually coded or implemented before. For example, our site deals with users looking at recipes and we wanted the users to be able to click a favorites button on a recipe they like and I know how to work with the button but I am not sure as to how I save them to a user’s home page. So, I asked ChatGPT on how I might go about creating a button that has this feature in js code and it replied with one code method and an explanation of the code. I then told it “Make it so that each user has their own array of favorites” and it changed the button handle to this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  const handleFavoriteToggle = () =&gt; {
+    if (isFavorite) {
+      // Recipe is already favorited, remove the current user from the owner array
+      const existingFavorite = recipeInfo.find(item =&gt; item._id === recipe._id);
+      const newOwner = existingFavorite.owner.filter(owner =&gt; owner !== userEmail);
+      console.log(newOwner);
+      Recipes.collection.update(
+        { _id: existingFavorite._id },
+        { $set: { owner: newOwner } },
+        (error) =&gt; {
+          if (error) {
+            // console.error('Update Error:', error);
+          } else {
+            console.log('Item updated successfully');
+            // swal('Success', 'Item removed from favorites', 'success');
+          }
+        },
+      );
+    } else {
+</code></pre></div></div>
+<p>After a few more prompts to fix the bugs and error, I finally had a functional favorite button!</p>
+
+<h2 id="learning-concepts--tutorials">Learning Concepts / Tutorials</h2>
+<p>When it came to the use of AI for learning concepts and tutorials, this was not a common thing that I used it for. I felt that code academy and the other sites we used to learn Html and JavaScript and everything else worked well enough for a teacher, explaining and breaking things down when first learning them that it all made sense. I also wanted to avoid the use of AI because I wanted to ensure that I was properly learning the basics so that I would have a solid foundation for the rest of the semester to build off of. Also the idea of using ChatGPT to create or be used for tutorials was never a thought that occurred to me. I often forget just how much one can do with the powers of AI.</p>
+
+<h2 id="asking-or-answering-in-class--smart-questions">Asking Or Answering In-Class / Smart Questions</h2>
+<p>AI can most definitely be used to help answer student questions but I never used AI in any such manner. I personally felt that when I ran into a problem it was often a problem that was a result of something occurring outside of the frame of reference or specific code that I was observing. It is also just easier for other students or teachers to answer because they will usually already have an idea of what the problem might be as they may have run into a similar problem. The utilization of AI to ask questions is something that seems illogical to me. It is better and faster if you simply ask the problem yourself since you already know what the error is even if you can’t figure out why. You asking AI to give you another question is just weird to me but I guess that just means that I know how to ask smart questions.</p>
+
+<h2 id="examples-explanations-writing--documenting-code">Examples, Explanations, Writing, &amp; Documenting Code</h2>
+<p>Explaining code to peers or in discussions was a predominantly human-driven task. While AI could suggest explanations, the contextual understanding and effective communication was stronger when human to human. I would occasionally ask ChatGPT to produce code examples of things such as react or CSS of image and text alignments. When I do so it would produce different results that I could test and play with to see for myself how certain fields would visually affect the site. In other situations I would have the AI write a section of my code such as classes and objects of the jamba juices on the menu as specified in the given homework prompt to save time with these tasks. When they finished, their output would also include documentation of the code explaining what each part of the code does and where I would have to write my own code in.</p>
+
+<h2 id="quality-assurance">Quality assurance</h2>
+<p>Quality assurance tasks benefited from AI, especially in identifying syntax and sometimes logic errors such as parameters for underscore methods errors or suggesting fixes. However, these would require the partial inputting of the assignment prompt to understand when needed. Some of the deeper issues  often required human expertise. AI was never necessary to fix ESLint errors as most of these errors were easily understandable for me and fixable through ESLint anyway.</p>
+
+<h1 id="impact-on-learning-and-understanding">Impact on Learning and Understanding:</h1>
+<p>The incorporation of AI in my ICS 314 class has significantly influenced my learning experience. AI technologies have served as valuable tools for quick references, code generation, and ideation. They have enhanced my comprehension by providing alternative perspectives and approaches to problem-solving. The rapid assistance offered by AI has improved my efficiency in grasping new concepts and tackling coding challenges. On the other hand, it has caused me to become too comfortable with not knowing enough information as I can always ask the AI to remind me of it. This causes a reliance on it, stunting curtain growth of skills that by now would have fully grown.</p>
+
+<h1 id="practical-applications">Practical Applications:</h1>
+<p>Beyond ICS 314, AI has a plethora of practical applications in real-world projects and collaborative activities. In initiatives like the Hawaii Annual Code Challenge (HACC), AI tools can assist in data analysis, code generation, and ideation. In our HACC project we used to understand how to implement a translation option for the whole page. The effectiveness of AI applications in addressing real-world software engineering challenges lies in their ability to augment human capabilities and streamline complex tasks. I have seen people on the internet use ChatGPT to fill in game codes where the users are inexperienced with no sense of direction but a solid goal in mind that leads to the incredible game existing.</p>
+
+<h1 id="challenges-and-opportunities">Challenges and Opportunities:</h1>
+<p>The biggest challenges and limitations that I observed while using ChatGPT in software engineering is that it can only help well with more contained common problems. What I mean by that is if you ask ChatGPT to work with or write code that is supposed to be connected with a multiple of pages, files, etc. then it runs into more problems when you try to attach everything together. It does not have access to everything, it only knows what you give it, so it is better to start small and build off what it gives you, making sure to test it as you go along. Another limitation that it has is that when working with uncommon application languages they are often too specific for ChatGPT to give you correctly syntactic code. Opportunities that arise from the use of AI are personalized learning paths where the AI can adapt to your strengths and weaknesses, optimizing your learning journey. I can also play a pivotal role in refining and adapting curriculums based on industry trends, emerging technologies, and the evolving needs of the software engineering field to ensure that education remains relevant in this ever-changing field.</p>
+
+<h1 id="comparative-analysis">Comparative Analysis:</h1>
+<p>When traditional teaching methods are compared to AI-enhanced ways, AI shines in terms of offering quick references, code suggestions, and varied problem-solving viewpoints. Traditional approaches, on the other hand, provide a more thorough understanding, human engagement, and tailored feedback. The best strategy is a well-balanced integration that uses AI to boost productivity while maintaining a solid foundation using conventional techniques.</p>
+
+<h1 id="future-considerations">Future Considerations:</h1>
+<p>Future developments in personalized learning, adaptable curriculum design, and more advanced AI technologies customized to the difficulties of software development look promising for the use of AI in software engineering education. Developing AI models for complex understanding and handling ethical issues are challenges. A smooth integration of AI and traditional methods of teaching will be possible with more studies and advances into the integration of AI in education.</p>
+
+<h1 id="conclusion">Conclusion:</h1>
+<p>The integration of AI, notably ChatGPT, in ICS 314 has greatly expedited learning through swift problem-solving and code generation. However, a caveat exists in the risk of overreliance, potentially impeding independent problem-solving skills. Challenges encompass limitations in handling larger code projects and uncommon languages. On the flip side, opportunities emerge in the form of personalized learning paths and refined curricula. Future courses should strike a balance between AI and traditional methods, refining AI capabilities, and addressing ethical considerations for an optimal and dynamic learning environment.</p>
+
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
