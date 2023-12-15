@@ -14,12 +14,14 @@ labels:
 <img src="https://www.brookings.edu/wp-content/uploads/2023/01/shutterstock_2237655785.jpg?w=1500" width="300px">
 
 #  Introduction
-The integration of Artificial Intelligence (AI) in school education is starting to change the learning environment, presenting new possibilities and tools for students to improve their learning experience. The role of AI has growing relevance to the field of software engineering as it provides a way for students to learn and be exposed to advanced tools and techniques to tackle complex coding solutions. The only AI that I have used in software engineering is ChatGPT to help assist me in breaking down complex or confusing tasks to better my own skills, reduce the amount of time it takes to write certain code,  and teach me how to code things that I would not normally know.
+The integration of Artificial Intelligence (AI) in school education is starting to change the learning environment, presenting new possibilities and tools for students to improve their learning experience. The role of AI has growing relevance to the field of software engineering as it provides a way for students to learn and be exposed to advanced tools and techniques to tackle complex coding solutions. The only AI that I have used in software engineering is every students best friend, [ChatGPT](https://chat.openai.com/), to help assist me in breaking down complex or confusing tasks to better my own skills, reduce the amount of time it takes to write certain code,  and teach me how to code things that I would not normally know.
 
 
 # Me, Myself, & AI Experiences in 314
 ## Experience / In-class / Practice WODS
-For all of the WOD if there was not a video that I watched and followed along at some point then I ended up using ChatGPT to help me solve them. ChatGPT was a life saver because of how quickly it could produce code with prompts related to the or taken from the in-class WOD. I am not the fastest typer and I didn’t have a lot of the code's methods, so how I would often use ChatGPT to produce this code much faster than me to save me precious time. One time, when we were working on the surfing prompt in one of our earliest WODs, I was just completely stuck and I was getting a different output than when I was supposed to get. So I copied the whole prompt over to ChatGPT and retired the code giving the correct output. They passed the WOD but I never really figured out what the issue was and thus was never able to learn from that mistake again so I tried to avoid doing that until I was almost out of time.
+In my software engineering class, I had to complete  a "WOD," which were these in-class assignments that had to be functional and finished within the limited time to pass. Sometimes, practice WODs were assigned as homework, and we could make multiple attempts to solve them. For all of the practice WODs, if there was not a video that I watched and followed along with at some point, then I ended up using ChatGPT to help me solve them. ChatGPT was a lifesaver because of how quickly it could produce code with prompts related to or taken from the in-class WOD. I am not the fastest typer, and I didn’t have knowledge of many of the code's methods, so I would often use ChatGPT to generate this code much faster than I could to save precious time.
+
+One time, when we were working on the surfing prompt in one of our earliest WODs, I was completely stuck, and I was getting a different output than I was supposed to get. So, I copied the whole prompt over to ChatGPT and retried the code, and it gave the correct output. I passed the WOD, but I never really figured out what the issue was and thus was never able to learn from that mistake. I tried to avoid doing that until I was almost out of time.
 
 
 ## Essays
@@ -27,7 +29,29 @@ While AI can most definitely be utilized to help with generating content, ideas,
 
 
 ## Final Project
-In the creation of our final project, I asked AI for help in making certain things that I have concepts for but never actually coded or implemented before. For example, our site deals with users looking at recipes and we wanted the users to be able to click a favorites button on a recipe they like and I know how to work with the button but I am not sure as to how I save them to a user's home page. So, I asked ChatGPT on how I might go about creating a button that has this feature in js code and it replied with one code method and an explanation of the code. Another time I was wondering how I might take information from an array and print it in a list and it showed me that I could do this but just placing the array[number] inside of a <li></li> that looped through. Looking at the solution anyone would think that this is to tell but I still haven’t worked nor seen how things interact with each other enough to be able to piece that together for myself, or at least be confident enough to test it. 
+In the creation of our final project, I asked AI for help in making certain things that I have concepts for but never actually coded or implemented before. For example, our site deals with users looking at recipes and we wanted the users to be able to click a favorites button on a recipe they like and I know how to work with the button but I am not sure as to how I save them to a user's home page. So, I asked ChatGPT on how I might go about creating a button that has this feature in js code and it replied with one code method and an explanation of the code. I then told it "Make it so that each user has their own array of favorites" and it changed the button handle to this: 
+```
+  const handleFavoriteToggle = () => {
+    if (isFavorite) {
+      // Recipe is already favorited, remove the current user from the owner array
+      const existingFavorite = recipeInfo.find(item => item._id === recipe._id);
+      const newOwner = existingFavorite.owner.filter(owner => owner !== userEmail);
+      console.log(newOwner);
+      Recipes.collection.update(
+        { _id: existingFavorite._id },
+        { $set: { owner: newOwner } },
+        (error) => {
+          if (error) {
+            // console.error('Update Error:', error);
+          } else {
+            console.log('Item updated successfully');
+            // swal('Success', 'Item removed from favorites', 'success');
+          }
+        },
+      );
+    } else {
+```
+After a few more prompts to fix the bugs and error, I finally had a functional favorite button!
 
 
 ## Learning Concepts / Tutorials
@@ -55,7 +79,7 @@ Beyond ICS 314, AI has a plethora of practical applications in real-world projec
 
 
 # Challenges and Opportunities:
-The biggest challenges and limitations that I observed while using ChatGPT in software engineering is that it can only help well with more contained common problems. What I mean by that is if you ask ChatGPT to work with or write code that is supposed to be connected with a multiple of pages, files, etc. then it runs into more problems when you try to attach everything together. It does not have access to everything, it only knows what you give it, so it is better to start small and build off what it gives you, making sure to test it as you go along. Another limitation that it has is that when working with uncommon application languages they are often too specific for ChatGPT to give you correctly syntactic code. Opportunities that arise from the use of AI are personalized learning paths where the AI can adapt to your strengths and weaknesses, optimizing your learning journey. I can also play a pivotal role in refining and adapting curriculums based on industry trends, emerging technologies, and the evolving needs of the software engineering field to ensure that education remains relevant in this ever changing field.
+The biggest challenges and limitations that I observed while using ChatGPT in software engineering is that it can only help well with more contained common problems. What I mean by that is if you ask ChatGPT to work with or write code that is supposed to be connected with a multiple of pages, files, etc. then it runs into more problems when you try to attach everything together. It does not have access to everything, it only knows what you give it, so it is better to start small and build off what it gives you, making sure to test it as you go along. Another limitation that it has is that when working with uncommon application languages they are often too specific for ChatGPT to give you correctly syntactic code. Opportunities that arise from the use of AI are personalized learning paths where the AI can adapt to your strengths and weaknesses, optimizing your learning journey. I can also play a pivotal role in refining and adapting curriculums based on industry trends, emerging technologies, and the evolving needs of the software engineering field to ensure that education remains relevant in this ever-changing field.
 
 
 # Comparative Analysis:
