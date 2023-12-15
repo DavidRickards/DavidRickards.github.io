@@ -4,7 +4,7 @@ type: project
 image: img/rpg_horror_logo.png
 title: "Untitled Game"
 date: 2022-10-14
-published: true
+published: false
 labels:
   - Game Design
   - Unity
