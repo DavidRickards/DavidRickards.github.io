@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/internship_logo.png
+image: img/contact-list.png
 title: "Contact List"
 date: 2023-12-10
 published: true
