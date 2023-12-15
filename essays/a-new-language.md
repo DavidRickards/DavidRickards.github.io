@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "Personal Thought On A New Language"
 date: 2023-08-28
-published: true
+published: false
 labels:
   - Personal Writting
   - Javascript
