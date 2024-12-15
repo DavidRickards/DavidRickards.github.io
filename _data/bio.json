@@ -1,0 +1,97 @@
+{
+  "basics": {
+    "name": "David Rickards",
+    "label": "Student",
+    "picture": "https://github.com/DavidRickards.png",
+    "email": "davidar@hawaii.edu",
+    "phone": "808-346-5573",
+    "website": "https://DavidRickards.github.io",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2025.",
+    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "DavidRickards", "url": "http://github.com/DavidRickards" }, 
+      { "network": "linkedin", "username": "David Rickards", "url": "https://www.linkedin.com/in/david-rickards-6a5b05224/" }
+    ]
+  },
+  "interests": [
+    { "name": "Software Engineering" }, 
+    { "name": "Graphic Design" },
+    { "name": "Web Development" },
+    { "name": "Artificial Intelligence" },
+    { "name": "Game Design" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "C++", "Java", "Javascript", "HTML"]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "Eclipse", "Ubuntu", "Git/GitHub" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2025)",
+      "studyType": "B.S.",
+      "startDate": "2021-09-01",
+      "endDate": "Present"
+     
+    },
+    {
+      "institution": "Waimea High School, Waimea, HI",
+      "area": "",
+      "studyType": "High School Diploma",
+      "startDate": "2017-08-07",
+      "endDate": "2021-05-21"
+    }
+  ],
+  "work": [
+    {
+      "company": "MWR Aquatics",
+      "position": "Lifeguard",
+      "website": "",
+      "startDate": "2019-01-13",
+      "endDate": "Present",
+      "summary": "Ensuring the safety of patrons and upkeep of the pool functions",
+      "highlights": [
+        "Certified Lifeguard, First Aid, and Rescue Skills",
+        "Certified Water Safety Instructor"
+      ]
+    }, {
+      "company": "County of Kauai, Long Range Planning Division",
+      "position": "Intern",
+      "website": "",
+      "startDate": "2023-06-26",
+      "endDate": "2023-08-04",
+      "summary": "Assisting the Planning Department with current projects.",
+      "highlights": [ "Assisted with the planning and organization of a youth summit", "Assisted with inputting  info for new GIS layers", "Designed event flyers"
+      ]
+    },
+    {
+      "company": "MWR Youth Center",
+      "position": "Recreation Aid",
+      "website": "",
+      "startDate": "2017-05-29",
+      "endDate": "2019-01-13",
+      "summary": "Responsible for assisting with the summer youth program",
+      "highlights": [
+      ]
+    }
+  ],
+  
+  "awards": [
+    {
+      "title": "Eagle Scout Rank",
+      "date": "Received April 26, 2021",
+      "awarder": "Boy Scouts of America",
+      "summary": "Completed all badges and Eagle scout project"
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
