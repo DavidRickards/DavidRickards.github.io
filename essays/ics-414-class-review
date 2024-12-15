@@ -21,7 +21,7 @@ This course centered around a single-site project that spanned the entire semest
 Our client for this course was Spire, and they tasked us with creating a functional application tailored to their needs. They requested an application that mirrored the functionality of the spreadsheets they had been using. The site we developed included various levels of authorization, with separate roles for accountants and clients. Each client's account contained their budget, workpapers, and projections, which were editable only by authorized accountants.
 Visualization of the data was a high priority for the clients, so we incorporated a visualization page that displayed data graphs and comparisons. Unfortunately, due to time constraints, we were unable to implement all the features we envisioned. Future improvements for the site include enhanced visuals for lists, additional workpapers, and an improved user interface for better organization of client information.
 
-<img src="https://www.brookings.edu/wp-content/uploads/2023/01/shutterstock_2237655785.jpg?w=1500" width="300px">
+<img src="../img/visualising-your-future.png" width="300px">
 
 
 ## Overall Thoughts
